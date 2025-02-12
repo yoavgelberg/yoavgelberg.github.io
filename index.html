@@ -1,98 +1,205 @@
-
-
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.135.0"><meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="robots" content="index, follow"><link rel="author" href="/humans.txt">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-<meta name="author" content="Yoav Gelberg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #A31F34;  /* MIT maroon */
+            --secondary-color: #3498db; /* Clear blue */
+            --text-color: #2c3e50;
+            --background-color: #ffffff;
+            --link-color: #0000EE;     /* Classic web link blue */
+            --highlight-color: #FF0000;  /* Highlight red */
+        }
 
-  <meta itemprop="name" content="Yoav Gelberg">
-  <meta itemprop="datePublished" content="2024-10-09T20:30:01+02:00">
-  <meta itemprop="dateModified" content="2024-10-09T20:30:01+02:00"><meta property="og:url" content="https://yoavgelberg.github.io/">
-  <meta property="og:site_name" content="Yoav Gelberg">
-  <meta property="og:title" content="Yoav Gelberg">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.4;
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0rem;
+            background: var(--background-color);
+        }
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Yoav Gelberg">
-<title>Yoav Gelberg</title>
-<link rel="alternate" type="application/rss+xml" href="https://yoavgelberg.github.io/index.xml" title="Yoav Gelberg" />
-<link rel="stylesheet dns-prefetch preconnect preload prefetch" as="style" href="https://yoavgelberg.github.io/css/style.min.13e07953b220851b2722c97ad825d49bfd6139c636f1bb9ad78ed14d4586ace9.css" integrity="sha256-E+B5U7IghRsnIsl62CXUm/1hOcY28bua147RTUWGrOk=" crossorigin="anonymous">
-<style>
-	#portrait-container {
-		display: flex;
-		justify-content: center;
-		margin-bottom: 20px;
-	}
+        header {
+            text-align: center;
+            margin-bottom: 0rem;
+            align-items: center;
+        }
 
-	#portrait {
-		max-width: 300px;
-		height: auto;
-		object-fit: contain;
-		border-radius: 10px;
-	}
+        .profile-img {
+            width: 320px;
+            height: 420px;
+            object-fit: cover;
+            margin-bottom: 0rem;
+        }
 
-	#home-title {
-		font-size: 2.0em;
-		 
-	}
-</style>
+        h1 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-weight: 100;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 0.2rem;
+            margin-top: 0.3rem;
+            margin-bottom: 0.2rem;
+            font-size: 1.2rem;
+        }
+
+        .bio {
+            margin: 1rem 0;
+            text-align: justify;
+        }
+
+        .papers {
+            display: grid;
+            gap: 0.1rem;
+        }
+
+        .paper {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+
+        .paper img {
+            width: 100%;
+            display: block;
+            margin: auto;
+        }
+
+        .paper-content h3 {
+            margin-top: 0;
+            margin-bottom: 0.3rem;
+            color: var(--primary-color);
+            font-weight: 100;
+            font-size: 1rem;
+        }
+
+        .paper-content h3 a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .paper-content h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .paper-content p {
+            margin: 0.3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .links {
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .links a {
+            color: var(--link-color);
+            text-decoration: none;
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            /* font-weight: 600; */
+            color: var(--highlight-color);
+        }
+        
+        .author-highlight {
+            color: var(--secondary-color);
+        }
+
+        .blog-preview {
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .profile-img {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .paper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<body id="page">
-<div id="spotlight" class="animated fadeIn">
-	<div id="home-center">
-		<div id="portrait-container">
-			<img id="portrait" src="/images/portrait3.jpg" alt="Portrait">
-		</div>
-		<h1 id="home-title">Yoav Gelberg</h1>
-		<div id="home-social">
-			<a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&amp;hl=en" target="_blank" rel="noopener me" title="Scholar"><svg class="feather" fill="currentColor" width="24" height="24" viewBox="0 0 24 24" role="img" class="feather"
-   xmlns="http://www.w3.org/2000/svg" stroke="none">
-   <title>Google Scholar icon</title>
-   <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
-</svg></a><a href="https://github.com/yoavgelberg" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-   <path
-      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-   </path>
-</svg></a><a href="https://twitter.com/yoav_gelberg" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-   <path
-      d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-   </path>
-</svg></a><a href="https://www.linkedin.com/in/yoav-gelberg" target="_blank" rel="noopener me" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-   <rect x="2" y="9" width="4" height="12"></rect>
-   <circle cx="4" cy="4" r="2"></circle>
-</svg></a><a href="mailto://yoav@robots.ox.ac.uk" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none"
-   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-   <polyline points="22,6 12,13 2,6"></polyline>
-</svg></a>
-		</div>
-		<nav id="home-nav" class="site-nav">
-			<a href="https://yoavgelberg.github.io/about/">About</a><a href="https://yoavgelberg.github.io/papers/">Papers</a>
-		</nav>
-	</div>
-	<div id="home-footer"><p>
-	&copy; 2024 <a href="https://yoavgelberg.github.io/">Yoav Gelberg</a> &#183; CC-BY-NC 4.0 
-	&#183; <a href="https://yoavgelberg.github.io/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss">
-   <path d="M4 11a9 9 0 0 1 9 9"></path>
-   <path d="M4 4a16 16 0 0 1 16 16"></path>
-   <circle cx="5" cy="19" r="1"></circle>
-</svg></a></p></div>
-</div>
-<script async src="https://yoavgelberg.github.io/js/bundle.min.c7c384e4d29d192bbac6811ae4660bb01767194a5bea56baca77e8260f93ea16.js" integrity="sha256-x8OE5NKdGSu6xoEa5GYLsBdnGUpb6la6ynfoJg+T6hY=" crossorigin="anonymous"></script><script async src="https://yoavgelberg.github.io/js/link-share.min.24409a4f6e5537d70ffc55ec8f9192208d718678cb8638585342423020b37f39.js" integrity="sha256-JECaT25VN9cP/FXsj5GSII1xhnjLhjhYU0JCMCCzfzk=" crossorigin="anonymous"></script>
-</body>
+<body>
+    <header>
+        <h1>Yoav Gelberg</h1>
+        <img src="assets/images/portrait.jpg" alt="Yoav Gelberg" class="profile-img">
+        <!-- <p>PhD Student @ University of Oxford</p> -->
+        <div class="links">
+            <a href="https://github.com/yoavgelberg">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">Google Scholar</a>
+            <a href="https://twitter.com/yoav_gelberg">Twitter</a>
+            <a href="mailto:yoav@robots.ox.ac.uk">Email</a>
+        </div>
+    </header>
 
+    <section class="bio">
+        <h2>About Me</h2>
+        <p>I'm a PhD student at the University of Oxford, supervised by <a href="https://haggaim.github.io/">Haggai Maron</a>, <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a> and <a href="https://www.cs.ox.ac.uk/people/yarin.gal/website/">Yarin Gal</a>. My research focuses on the symmetry and structure of neural network parameter spaces with application to deep (meta-)learning. I'm also interested in data symmetries more broadly and how structure can inform learning.</p>
+        <p>Before Oxford, I completed my undergraduate studies at the Technion as a <a href="https://excellence.technion.ac.il/en/about-the-program/">Rothschild scholar</a>, studied expander graphs at the Weizmann Institute, developed fair learning algorithms at Fairgen, and taught math and programming at the <a href="https://www.ardc-israel.org/">ARDC</a>. My PhD is funded by the EPSRC through the <a href="https://aims.robots.ox.ac.uk/">AIMS CDT program</a>.</p>
+    </section>
+
+    <section class="papers">
+        <h2>Publications</h2>
+        <p style="margin-top: -0.3rem; margin-bottom: 0.3rem; font-size: 0.9em; color: #666;"><em>* denotes equal contribution</em></p>
+        <div class="paper">
+            <img src="assets/images/lol.png" alt="LoL">
+            <div class="paper-content">
+                <h3><a href="https://arxiv.org/pdf/2410.04207">Leaning on LoRAs: GL-Equivariant Processing of Low-Rank Weight Spaces for Large Finetuned Models</a></h3>
+                <p>Theo (Moe) Putterman, Derek Lim, <span class="author-highlight">Yoav Gelberg</span>, Stephanie Jegelka, Haggai Maron</p>
+                <div class="links">
+                    <!-- <a href="#">Code</a>
+                    <a href="#">Blog Post</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="paper">
+            <img src="assets/images/topological_blindspots.png" alt="Topological Blindspots">
+            <div class="paper-content">
+                <h3><a href="https://arxiv.org/pdf/2408.05486">Topological Blindspots: Understanding and Extending Topological Deep Learning Through the Lens of Expressivity</a></h3>
+                <p>Yam Eitan*, <span class="author-highlight">Yoav Gelberg</span>*, Guy Bar-Shalom, Fabrizio Frasca, Michael Bronstein, Haggai Maron</p>
+                <p><strong>Venue:</strong> ICLR 2025 <span class="highlight">(Oral Presentation 🎤)</span></p>
+                <div class="links">
+                    <!-- <a href="#">Code</a>
+                    <a href="#">Blog Post</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="paper">
+            <img src="assets/images/optim.gif" alt="KL Divergence">
+            <div class="paper-content">
+                <h3><a href="https://arxiv.org/pdf/2408.05496">Variational Inference Failures Under Model Symmetries: Permutation Invariant Posteriors for Bayesian Neural Networks</a></h3>
+                <p><span class="author-highlight">Yoav Gelberg</span>, Tycho van der Ouderaa, Mark van der Wilk, Yarin Gal</p>
+                <p><strong>Venue:</strong> GRaM Workshop @ ICML 2024 <span class="highlight">(Best Paper Award 🏆)</span></p>
+                <div class="links">
+                    <!-- <a href="#">Code</a>
+                    <a href="#">Blog Post</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
