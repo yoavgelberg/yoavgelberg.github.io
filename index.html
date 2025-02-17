@@ -28,7 +28,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 0rem;
+            margin-bottom: 2rem;
             align-items: center;
         }
 
@@ -52,13 +52,18 @@
             border-bottom: 1px solid var(--primary-color);
             padding-bottom: 0.2rem;
             margin-top: 0.3rem;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0rem;
             font-size: 1.2rem;
         }
 
         .bio {
-            margin: 1rem 0;
+            margin: 0.5rem 0;
             text-align: justify;
+        }
+
+        .bio p {
+            margin-top: 0.3rem;
+            margin-bottom: 0.5rem;
         }
 
         .papers {
@@ -159,12 +164,12 @@
     <section class="bio">
         <h2>About Me</h2>
         <p>I'm a PhD student at the University of Oxford, supervised by <a href="https://haggaim.github.io/">Haggai Maron</a>, <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a> and <a href="https://www.cs.ox.ac.uk/people/yarin.gal/website/">Yarin Gal</a>. My research focuses on the symmetry and structure of neural network parameter spaces with application to deep (meta-)learning. I'm also interested in data symmetries more broadly and how structure can inform learning.</p>
-        <p>Before Oxford, I completed my undergraduate studies at the Technion as a <a href="https://excellence.technion.ac.il/en/about-the-program/">Rothschild scholar</a>, studied expander graphs at the Weizmann Institute, developed fair learning algorithms at Fairgen, and taught math and programming at the <a href="https://www.ardc-israel.org/">ARDC</a>. My PhD is funded by the EPSRC through the <a href="https://aims.robots.ox.ac.uk/">AIMS CDT program</a>.</p>
+        <p style="margin-bottom: 1rem;">Before Oxford, I completed my undergraduate studies at the Technion as a <a href="https://excellence.technion.ac.il/en/about-the-program/">Rothschild scholar</a>, studied expander graphs at the Weizmann Institute, developed fair learning algorithms at Fairgen, and taught math and programming at the <a href="https://www.ardc-israel.org/">ARDC</a>. My PhD is funded by the EPSRC through the <a href="https://aims.robots.ox.ac.uk/">AIMS CDT program</a>.</p>
     </section>
 
     <section class="papers">
         <h2>Publications</h2>
-        <p style="margin-top: -0.3rem; margin-bottom: 0.3rem; font-size: 0.9em; color: #666;"><em>* denotes equal contribution</em></p>
+        <p style="margin-top: 0rem; margin-bottom: 0.3rem; font-size: 0.9em;"><em>* denotes equal contribution</em></p>
         <div class="paper">
             <img src="assets/images/lol.png" alt="LoL">
             <div class="paper-content">
