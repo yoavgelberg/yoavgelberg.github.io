@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #a31f34;  /* MIT maroon */
-            --secondary-color: #3498db; /* Clear blue */
+            --primary-color: #a31f34;
+            /* MIT maroon */
+            --secondary-color: #3498db;
+            /* Clear blue */
             --text-color: #2c3e50;
-            --background-color: #ffffff; /* Very light brown */
-            --link-color: #0000ee;     /* Classic web link blue */
-            --highlight-color: #66bb6a;  /* Highlight green */
+            --background-color: #ffffff;
+            /* Very light brown */
+            --link-color: #0000ee;
+            /* Classic web link blue */
+            --highlight-color: #66bb6a;
+            /* Highlight green */
         }
 
         body {
@@ -28,7 +34,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             align-items: center;
         }
 
@@ -59,11 +65,12 @@
         .bio {
             margin: 0.5rem 0;
             text-align: justify;
+            margin-bottom: 2.0rem;
         }
 
         .bio p {
-            margin-top: 0.3rem;
-            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1.0rem;
         }
 
         .papers {
@@ -74,8 +81,8 @@
         .paper {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 0.8rem;
-            padding: 0.8rem;
+            gap: 1.0rem;
+            padding: 1.0rem;
             border-bottom: 1px solid #eee;
             align-items: center;
         }
@@ -88,7 +95,7 @@
 
         .paper-content h3 {
             margin-top: 0;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
             color: var(--primary-color);
             font-weight: 100;
             font-size: 1rem;
@@ -116,8 +123,8 @@
         .links a {
             color: var(--link-color);
             text-decoration: none;
-            margin-right: 0.5rem;
-            margin-left: 0.5rem;
+            margin-right: 0.4rem;
+            margin-left: 0.4rem;
         }
 
         .links a:hover {
@@ -128,7 +135,7 @@
             /* font-weight: 600; */
             color: var(--highlight-color);
         }
-        
+
         .author-highlight {
             color: var(--secondary-color);
         }
@@ -142,20 +149,21 @@
                 width: 300px;
                 height: 300px;
             }
-            
+
             .paper {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Yoav Gelberg</h1>
         <img src="assets/images/portrait.jpg" alt="Yoav Gelberg" class="profile-img">
         <div class="links">
             <a href="https://github.com/yoavgelberg">[GitHub]</a>
-            <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">[Google Scholar]</a>
+            <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">[Scholar]</a>
             <a href="https://twitter.com/yoav_gelberg">[Twitter]</a>
             <a href="mailto:yoav@robots.ox.ac.uk">[Email]</a>
         </div>
@@ -163,18 +171,32 @@
 
     <section class="bio">
         <h2>About Me</h2>
-        <p>I'm a PhD student at the University of Oxford, supervised by <a href="https://haggaim.github.io/">Haggai Maron</a>, <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a> and <a href="https://www.cs.ox.ac.uk/people/yarin.gal/website/">Yarin Gal</a>. My research focuses on the symmetry and structure of neural network <em>parameter spaces</em> with application to deep (meta-)learning. I'm also interested in <em>architecture reserach</em>  more broadly and in the way structure can inform learning. I spent the summer of 2025 at <a href="https://sakana.ai">Sakana AI</a>, working on positional embeddings and length generalization in LLMs.</p> 
-        <p style="margin-bottom: 1rem;">Before Oxford, I completed my undergraduate studies at the Technion as a <a href="https://excellence.technion.ac.il/en/about-the-program/">Rothschild scholar</a>, studied expander graphs at the Weizmann Institute, developed fair learning algorithms at Fairgen, and taught math and programming at the <a href="https://www.ardc-israel.org/">ARDC</a>. My PhD is funded by the EPSRC through the <a href="https://aims.robots.ox.ac.uk/">AIMS CDT program</a>.</p>
+        <p>I'm a PhD student at the University of Oxford, supervised by <a href="https://haggaim.github.io/">Haggai
+                Maron</a>, <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a> and <a
+                href="https://www.cs.ox.ac.uk/people/yarin.gal/website/">Yarin Gal</a>. My research focuses on the
+            symmetry and structure of neural network <em>parameter spaces</em> with application to deep (meta-)learning.
+            I'm also interested in <em>architecture reserach</em> more broadly and in the way structure can inform
+            learning. I spent the summer of 2025 at <a href="https://sakana.ai">Sakana AI</a>, working on positional
+            embeddings and length generalization in LLMs.</p>
+        <p style="margin-bottom: 1rem;">Before Oxford, I completed my undergraduate studies at the Technion as a <a
+                href="https://excellence.technion.ac.il/en/about-the-program/">Rothschild scholar</a>, studied expander
+            graphs at the Weizmann Institute, developed fair learning algorithms at Fairgen, and taught math and
+            programming at the <a href="https://www.ardc-israel.org/">ARDC</a>. My PhD is funded by the EPSRC through
+            the <a href="https://aims.robots.ox.ac.uk/">AIMS CDT program</a>.</p>
     </section>
 
     <section class="papers">
         <h2>Selected Publications</h2>
-        <p style="margin-top: 0rem; margin-bottom: 0.3rem; font-size: 0.9em;"><em>* denotes equal contribution; full list on <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">Google Scholar</a></em></p>
+        <p style="margin-top: 0rem; margin-bottom: 0.3rem; font-size: 0.9em;"><em>* denotes equal contribution; full
+                list on <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">Google Scholar</a></em>
+        </p>
         <div class="paper">
             <img src="assets/images/gradmetanet.png" alt="GradMetaNet">
             <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2507.01649">GradMetaNet: An Equivariant Architecture for Learning on Gradients</a></h3>
-                <p><span class="author-highlight">Yoav Gelberg</span>*, Yam Eitan*, Aviv Navon, Aviv Shamsian, Theo (Moe) Putterman, Michael Bronstein, Haggai Maron</p>
+                <h3><a href="https://arxiv.org/pdf/2507.01649">GradMetaNet: An Equivariant Architecture for Learning on
+                        Gradients</a></h3>
+                <p><span class="author-highlight">Yoav Gelberg</span>*, Yam Eitan*, Aviv Navon, Aviv Shamsian, Theo
+                    (Moe) Putterman, Michael Bronstein, Haggai Maron</p>
                 <p><strong>Venue:</strong> NeurIPS 2025</p>
                 <p><strong>Also at:</strong> Weight Space Learning Workshop @ ICLR 2025</p>
                 <div class="links">
@@ -186,8 +208,10 @@
         <div class="paper">
             <img src="assets/images/lol.png" alt="LoL">
             <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2410.04207">Leaning on LoRAs: GL-Equivariant Processing of Low-Rank Weight Spaces for Large Finetuned Models</a></h3>
-                <p>Theo (Moe) Putterman*, Derek Lim*, <span class="author-highlight">Yoav Gelberg</span>, Stephanie Jegelka, Haggai Maron</p>
+                <h3><a href="https://arxiv.org/pdf/2410.04207">Leaning on LoRAs: GL-Equivariant Processing of Low-Rank
+                        Weight Spaces for Large Finetuned Models</a></h3>
+                <p>Theo (Moe) Putterman*, Derek Lim*, <span class="author-highlight">Yoav Gelberg</span>, Stephanie
+                    Jegelka, Haggai Maron</p>
                 <p><strong>Venue:</strong> LoG 2025, <span class="highlight">Oral Presentation 🎤</span></p>
                 <p><strong>Also At:</strong> Weight Space Learning Workshop @ ICLR 2025</p>
                 <div class="links">
@@ -199,7 +223,8 @@
         <div class="paper">
             <img src="assets/images/misalignment.png" alt="Misalignment">
             <div class="paper-content">
-                <h3><a href="https://openreview.net/pdf?id=jo2zpLRKMk">Misalignment Between Vision-Language Representations in Vision-Language Models</a></h3>
+                <h3><a href="https://openreview.net/pdf?id=jo2zpLRKMk">Misalignment Between Vision-Language
+                        Representations in Vision-Language Models</a></h3>
                 <p>Yonatan Gideoni, <span class="author-highlight">Yoav Gelberg</span>, Tim G. J. Rudner, Yarin Gal </p>
                 <p><strong>Venue:</strong> UniReps + CogInterp Workshops @ NeurIPS 2025</p>
                 <div class="links">
@@ -211,8 +236,10 @@
         <div class="paper">
             <img src="assets/images/losnet.png" alt="LOSNet">
             <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2503.14043">Beyond Next Token Probabilities: Learnable, Fast Detection of Hallucinations and Data Contamination on LLM Output Distributions</a></h3>
-                <p>Fabrizio Frasca*, Guy Bar-Shalom*, Derek Lim, <span class="author-highlight">Yoav Gelberg</span>, Yftah Ziser, Ran El-Yaniv, Gal Chechik, Haggai Maron</p>
+                <h3><a href="https://arxiv.org/pdf/2503.14043">Beyond Next Token Probabilities: Learnable, Fast
+                        Detection of Hallucinations and Data Contamination on LLM Output Distributions</a></h3>
+                <p>Fabrizio Frasca*, Guy Bar-Shalom*, Derek Lim, <span class="author-highlight">Yoav Gelberg</span>,
+                    Yftah Ziser, Ran El-Yaniv, Gal Chechik, Haggai Maron</p>
                 <p><strong>Venue:</strong> R2-FM Workshop @ ICML 2025</p>
                 <div class="links">
                     <!-- <a href="#">Code</a>
@@ -223,8 +250,10 @@
         <div class="paper">
             <img src="assets/images/topological_blindspots.png" alt="Topological Blindspots">
             <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2408.05486">Topological Blindspots: Understanding and Extending Topological Deep Learning Through the Lens of Expressivity</a></h3>
-                <p>Yam Eitan*, <span class="author-highlight">Yoav Gelberg</span>*, Guy Bar-Shalom, Fabrizio Frasca, Michael Bronstein, Haggai Maron</p>
+                <h3><a href="https://arxiv.org/pdf/2408.05486">Topological Blindspots: Understanding and Extending
+                        Topological Deep Learning Through the Lens of Expressivity</a></h3>
+                <p>Yam Eitan*, <span class="author-highlight">Yoav Gelberg</span>*, Guy Bar-Shalom, Fabrizio Frasca,
+                    Michael Bronstein, Haggai Maron</p>
                 <p><strong>Venue:</strong> ICLR 2025, <span class="highlight">Oral Presentation 🎤</span></p>
                 <div class="links">
                     <!-- <a href="#">Code</a>
@@ -235,10 +264,12 @@
         <div class="paper">
             <img src="assets/images/optim.gif" alt="KL Divergence">
             <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2408.05496">Variational Inference Failures Under Model Symmetries: Permutation Invariant Posteriors for Bayesian Neural Networks</a></h3>
-                <p><span class="author-highlight">Yoav Gelberg</span>, Tycho van der Ouderaa, Mark van der Wilk, Yarin Gal</p>
-                <p><strong>Venue:</strong> PMLR </p>
-                <p><strong>Also at:</strong> GRaM Workshop @ ICML 2024, <span class="highlight">Best Paper Award 🏆</span></p>
+                <h3><a href="https://arxiv.org/pdf/2408.05496">Variational Inference Failures Under Model Symmetries:
+                        Permutation Invariant Posteriors for Bayesian Neural Networks</a></h3>
+                <p><span class="author-highlight">Yoav Gelberg</span>, Tycho van der Ouderaa, Mark van der Wilk, Yarin
+                    Gal</p>
+                <p><strong>Venue:</strong> GRaM Workshop @ ICML 2024, <span class="highlight">Best Paper Award 🏆</span>
+                </p>
                 <div class="links">
                     <!-- <a href="#">Code</a>
                     <a href="#">Blog Post</a> -->
@@ -247,4 +278,5 @@
         </div>
     </section>
 </body>
+
 </html>
