@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Yoav Gelberg — Oxford student and ML researcher focused on adaptable, reliable language models, post-training adaptation, long-context modeling, misbehavior detection, and weight-space learning.">
     <title>Yoav Gelberg</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -179,142 +181,151 @@
     <header>
         <h1>Yoav Gelberg</h1>
         <img src="assets/images/portrait.jpg" alt="Yoav Gelberg" class="profile-img">
-        <div class="links">
+        <nav class="links" aria-label="External links">
             <a href="https://github.com/yoavgelberg">[GitHub]</a>
             <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">[Scholar]</a>
             <a href="https://twitter.com/yoav_gelberg">[Twitter]</a>
             <a href="mailto:yoav@robots.ox.ac.uk">[Email]</a>
-        </div>
+        </nav>
     </header>
 
-    <section class="bio">
-        <h2>About Me</h2>
-        <p>I'm a student at the University of Oxford, working with <a href="https://haggaim.github.io/">Haggai
-                Maron</a>, <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a>, and <a
-                href="https://www.cs.ox.ac.uk/people/yarin.gal/website/">Yarin Gal</a>. My research is focused on making
-            language models more <em>adaptable</em> and <em>reliable</em>, closing the gap between what LLMs can do in
-            principle and what they consistently do in deployment. To that end, I work on post-training adaptation,
-            long-context language modeling, misbehavior detection/monitoring, and data efficient architecture design. A
-            recurring theme in my work is exploiting structure in neural parameter spaces and decoding model behavior
-            from weights and activations. </p>
+    <main>
+        <section class="bio">
+            <h2>About Me</h2>
+            <p>I'm a student at the University of Oxford, working with <a href="https://haggaim.github.io/">Haggai
+                    Maron</a>, <a href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a>, and <a
+                    href="https://www.cs.ox.ac.uk/people/yarin.gal/website/">Yarin Gal</a>. My research is focused on making
+                language models more <em>adaptable</em> and <em>reliable</em>, closing the gap between what LLMs can do in
+                principle and what they consistently do in deployment. To that end, I work on post-training adaptation,
+                long-context language modeling, misbehavior detection/monitoring, and data efficient architecture design. A
+                recurring theme in my work is exploiting structure in neural parameter spaces and decoding model behavior
+                from weights and activations. </p>
 
-        <p style="margin-bottom: 1rem;"> In 2025, I co-organized the first <a
-                href="https://weight-space-learning.github.io/">Weight Space Learning Workshop</a> @ ICLR and spent
-            the summer at <a href="https://sakana.ai">Sakana AI</a>,
-            studying positional embeddings and length generalization in LLMs. Before Oxford, I completed my
-            undergraduate studies at the Technion as a <a
-                href="https://excellence.technion.ac.il/en/about-the-program/">Rothschild scholar</a>, studied
-            robustness of expander graphs at the Weizmann Institute, developed fair learning algorithms at Fairgen, and
-            taught math and programming at the <a href="https://www.ardc-israel.org/">ARDC</a>. When I can find the
-            time, I love baking 🍞, kitesurfing 🪁, and snowboarding 🏂️.
-        </p>
-    </section>
+            <p style="margin-bottom: 1rem;"> In 2025, I co-organized the first <a
+                    href="https://weight-space-learning.github.io/">Weight Space Learning Workshop</a> @ ICLR and spent
+                the summer at <a href="https://sakana.ai">Sakana AI</a>,
+                studying positional embeddings and length generalization in LLMs. Before Oxford, I completed my
+                undergraduate studies at the Technion as a <a
+                    href="https://excellence.technion.ac.il/en/about-the-program/">Rothschild scholar</a>, studied
+                robustness of expander graphs at the Weizmann Institute, developed fair learning algorithms at Fairgen, and
+                taught math and programming at the <a href="https://www.ardc-israel.org/">ARDC</a>. When I can find the
+                time, I love baking 🍞, kitesurfing 🪁, and snowboarding 🏂️.
+            </p>
+        </section>
 
-    <section class="papers">
-        <h2>Selected Publications</h2>
-        <p style="margin-top: 0rem; margin-bottom: 0.3rem; font-size: 0.9em;"><em>* denotes equal contribution; full
-                list on <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">Google Scholar</a></em>
-        </p>
-        <div class="paper">
-            <img src="assets/images/drope.gif" alt="DroPE">
-            <div class="paper-content">
-                <h3><a href="https://www.arxiv.org/abs/2512.12167">Extending the Context of Pretrained LLMs by Dropping
-                        Their Positional Embeddings
-                    </a></h3>
-                <p><span class="author-highlight">Yoav Gelberg</span>, Koshi Eguchi, Takuya Akiva, Edoardo Cetin</p>
-                <p><strong>ICLR 2026</strong></p>
-                <p><a href="https://github.com/SakanaAI/DroPE">Code</a>, <a href="https://pub.sakana.ai/DroPE/">Blog</a></p>
-                <div class="links">
-                    <!-- <a href="#">Code</a>
-                    <a href="#">Blog Post</a> -->
+        <section class="papers">
+            <h2>Selected Publications</h2>
+            <p style="margin-top: 0rem; margin-bottom: 0.3rem; font-size: 0.9em;"><em>* denotes equal contribution; full
+                    list on <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">Google Scholar</a></em>
+            </p>
+            <div class="paper">
+                <img src="assets/images/drope.gif"
+                    alt="Animated figure from DroPE: extending LLM context by dropping positional embeddings." loading="lazy">
+                <div class="paper-content">
+                    <h3><a href="https://www.arxiv.org/abs/2512.12167">Extending the Context of Pretrained LLMs by Dropping
+                            Their Positional Embeddings
+                        </a></h3>
+                    <p><span class="author-highlight">Yoav Gelberg</span>, Koshi Eguchi, Takuya Akiva, Edoardo Cetin</p>
+                    <p><strong>ICLR 2026</strong></p>
+                    <p><a href="https://github.com/SakanaAI/DroPE">Code</a>, <a href="https://pub.sakana.ai/DroPE/">Blog</a></p>
+                    <div class="links">
+                        <!-- <a href="#">Code</a>
+                        <a href="#">Blog Post</a> -->
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="paper">
-            <img src="assets/images/gradmetanet.png" alt="GradMetaNet">
-            <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2507.01649">GradMetaNet: An Equivariant Architecture for Learning on
-                        Gradients</a></h3>
-                <p><span class="author-highlight">Yoav Gelberg</span>*, Yam Eitan*, Aviv Navon, Aviv Shamsian, Theo
-                    (Moe) Putterman, Michael Bronstein, Haggai Maron</p>
-                <p><strong>NeurIPS 2025</strong></p>
-                <p><strong>Weight Space Learning Workshop @ ICLR 2025</strong></p>
-                <div class="links">
-                    <!-- <a href="#">Code</a>
-                    <a href="#">Blog Post</a> -->
+            <div class="paper">
+                <img src="assets/images/gradmetanet.png"
+                    alt="GradMetaNet overview figure: an equivariant architecture for learning on gradients." loading="lazy">
+                <div class="paper-content">
+                    <h3><a href="https://arxiv.org/pdf/2507.01649">GradMetaNet: An Equivariant Architecture for Learning on
+                            Gradients</a></h3>
+                    <p><span class="author-highlight">Yoav Gelberg</span>*, Yam Eitan*, Aviv Navon, Aviv Shamsian, Theo
+                        (Moe) Putterman, Michael Bronstein, Haggai Maron</p>
+                    <p><strong>NeurIPS 2025</strong></p>
+                    <p><strong>Weight Space Learning Workshop @ ICLR 2025</strong></p>
+                    <div class="links">
+                        <!-- <a href="#">Code</a>
+                        <a href="#">Blog Post</a> -->
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="paper">
-            <img src="assets/images/lol.png" alt="LoL">
-            <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2410.04207">Leaning on LoRAs: GL-Equivariant Processing of Low-Rank
-                        Weight Spaces for Large Finetuned Models</a></h3>
-                <p>Theo (Moe) Putterman*, Derek Lim*, <span class="author-highlight">Yoav Gelberg</span>, Stephanie
-                    Jegelka, Haggai Maron</p>
-                <p><strong>LoG 2025, <span class="highlight">Oral Presentation 🎤</span></strong></p>
-                <p><strong>Weight Space Learning Workshop @ ICLR 2025</strong></p>
-                <div class="links">
-                    <!-- <a href="#">Code</a>
-                    <a href="#">Blog Post</a> -->
+            <div class="paper">
+                <img src="assets/images/lol.png"
+                    alt="LoL paper figure: GL-equivariant processing of low-rank weight spaces." loading="lazy">
+                <div class="paper-content">
+                    <h3><a href="https://arxiv.org/pdf/2410.04207">Leaning on LoRAs: GL-Equivariant Processing of Low-Rank
+                            Weight Spaces for Large Finetuned Models</a></h3>
+                    <p>Theo (Moe) Putterman*, Derek Lim*, <span class="author-highlight">Yoav Gelberg</span>, Stephanie
+                        Jegelka, Haggai Maron</p>
+                    <p><strong>LoG 2025, <span class="highlight">Oral Presentation 🎤</span></strong></p>
+                    <p><strong>Weight Space Learning Workshop @ ICLR 2025</strong></p>
+                    <div class="links">
+                        <!-- <a href="#">Code</a>
+                        <a href="#">Blog Post</a> -->
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="paper">
-            <img src="assets/images/misalignment.png" alt="Misalignment">
-            <div class="paper-content">
-                <h3><a href="https://openreview.net/pdf?id=jo2zpLRKMk">Misalignment Between Vision-Language
-                        Representations in Vision-Language Models</a></h3>
-                <p>Yonatan Gideoni, <span class="author-highlight">Yoav Gelberg</span>, Tim G. J. Rudner, Yarin Gal </p>
-                <p><strong>UniReps + CogInterp Workshops @ NeurIPS 2025</strong></p>
-                <div class="links">
-                    <!-- <a href="#">Code</a>
-                    <a href="#">Blog Post</a> -->
+            <div class="paper">
+                <img src="assets/images/misalignment.png"
+                    alt="Misalignment paper figure on vision-language representation gaps." loading="lazy">
+                <div class="paper-content">
+                    <h3><a href="https://openreview.net/pdf?id=jo2zpLRKMk">Misalignment Between Vision-Language
+                            Representations in Vision-Language Models</a></h3>
+                    <p>Yonatan Gideoni, <span class="author-highlight">Yoav Gelberg</span>, Tim G. J. Rudner, Yarin Gal </p>
+                    <p><strong>UniReps + CogInterp Workshops @ NeurIPS 2025</strong></p>
+                    <div class="links">
+                        <!-- <a href="#">Code</a>
+                        <a href="#">Blog Post</a> -->
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="paper">
-            <img src="assets/images/losnet.png" alt="LOSNet">
-            <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2503.14043">Beyond Next Token Probabilities: Learnable, Fast
-                        Detection of Hallucinations and Data Contamination on LLM Output Distributions</a></h3>
-                <p>Fabrizio Frasca*, Guy Bar-Shalom*, Derek Lim, <span class="author-highlight">Yoav Gelberg</span>,
-                    Yftah Ziser, Ran El-Yaniv, Gal Chechik, Haggai Maron</p>
-                <p><strong>AAAI 2026</strong></p>
-                <p><strong>R2-FM Workshop @ ICML 2025</strong></p>
-                <div class="links">
-                    <!-- <a href="#">Code</a>
-                    <a href="#">Blog Post</a> -->
+            <div class="paper">
+                <img src="assets/images/losnet.png"
+                    alt="LOSNet paper figure on detecting hallucinations and data contamination." loading="lazy">
+                <div class="paper-content">
+                    <h3><a href="https://arxiv.org/pdf/2503.14043">Beyond Next Token Probabilities: Learnable, Fast
+                            Detection of Hallucinations and Data Contamination on LLM Output Distributions</a></h3>
+                    <p>Fabrizio Frasca*, Guy Bar-Shalom*, Derek Lim, <span class="author-highlight">Yoav Gelberg</span>,
+                        Yftah Ziser, Ran El-Yaniv, Gal Chechik, Haggai Maron</p>
+                    <p><strong>AAAI 2026</strong></p>
+                    <p><strong>R2-FM Workshop @ ICML 2025</strong></p>
+                    <div class="links">
+                        <!-- <a href="#">Code</a>
+                        <a href="#">Blog Post</a> -->
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="paper">
-            <img src="assets/images/topological_blindspots.png" alt="Topological Blindspots">
-            <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2408.05486">Topological Blindspots: Understanding and Extending
-                        Topological Deep Learning Through the Lens of Expressivity</a></h3>
-                <p>Yam Eitan*, <span class="author-highlight">Yoav Gelberg</span>*, Guy Bar-Shalom, Fabrizio Frasca,
-                    Michael Bronstein, Haggai Maron</p>
-                <p><strong>ICLR 2025, <span class="highlight">Oral Presentation 🎤</span></strong></p>
-                <p><a href="https://github.com/yoavgelberg/SMCN">Code</a></p>
-            </div>
-        </div>
-        <div class="paper">
-            <img src="assets/images/optim.gif" alt="KL Divergence">
-            <div class="paper-content">
-                <h3><a href="https://arxiv.org/pdf/2408.05496">Variational Inference Failures Under Model Symmetries:
-                        Permutation Invariant Posteriors for Bayesian Neural Networks</a></h3>
-                <p><span class="author-highlight">Yoav Gelberg</span>, Tycho van der Ouderaa, Mark van der Wilk, Yarin
-                    Gal</p>
-                <p><strong>PMLR, GRaM Workshop @ ICML 2024, <span class="highlight">Best Paper Award 🏆</span></strong>
-                </p>
-                <div class="links">
-                    <!-- <a href="#">Code</a>
-                    <a href="#">Blog Post</a> -->
+            <div class="paper">
+                <img src="assets/images/topological_blindspots.png"
+                    alt="Topological Blindspots paper figure on expressivity in topological deep learning." loading="lazy">
+                <div class="paper-content">
+                    <h3><a href="https://arxiv.org/pdf/2408.05486">Topological Blindspots: Understanding and Extending
+                            Topological Deep Learning Through the Lens of Expressivity</a></h3>
+                    <p>Yam Eitan*, <span class="author-highlight">Yoav Gelberg</span>*, Guy Bar-Shalom, Fabrizio Frasca,
+                        Michael Bronstein, Haggai Maron</p>
+                    <p><strong>ICLR 2025, <span class="highlight">Oral Presentation 🎤</span></strong></p>
+                    <p><a href="https://github.com/yoavgelberg/SMCN">Code</a></p>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="paper">
+                <img src="assets/images/optim.gif"
+                    alt="Animated figure on permutation-invariant posteriors under model symmetries." loading="lazy">
+                <div class="paper-content">
+                    <h3><a href="https://arxiv.org/pdf/2408.05496">Variational Inference Failures Under Model Symmetries:
+                            Permutation Invariant Posteriors for Bayesian Neural Networks</a></h3>
+                    <p><span class="author-highlight">Yoav Gelberg</span>, Tycho van der Ouderaa, Mark van der Wilk, Yarin
+                        Gal</p>
+                    <p><strong>PMLR, GRaM Workshop @ ICML 2024, <span class="highlight">Best Paper Award 🏆</span></strong>
+                    </p>
+                    <div class="links">
+                        <!-- <a href="#">Code</a>
+                        <a href="#">Blog Post</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
