@@ -4,322 +4,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Yoav Gelberg — Oxford student and machine learning researcher.">
+    <meta name="description" content="Yoav Gelberg — machine learning researcher and incoming Stanford CS PhD student.">
     <title>Yoav Gelberg</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css?v=12">
     <style>
-        :root {
-            --primary-color: #a31f34;
-            /* MIT maroon */
-            --secondary-color: #3498db;
-            /* Clear blue */
-            --text-color: #2c3e50;
-            --background-color: #faf8f2;
-            /* Very light brown */
-            --link-color: #0000ee;
-            /* Classic web link blue */
-            --highlight-color: #66bb6a;
-            /* Highlight green */
-        }
-
         body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.4;
-            color: var(--text-color);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1rem;
-            background: var(--background-color);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0 3.5rem 7rem;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.55;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            align-items: center;
+        .home-page {
+            width: 100%;
         }
 
-        .profile-img {
-            width: 320px;
-            height: 420px;
-            object-fit: cover;
-            margin-bottom: 0rem;
+        .home-grid {
+            display: grid;
+            grid-template-columns: 20rem max-content;
+            column-gap: clamp(1.25rem, 3vw, 3.5rem);
+            row-gap: 1rem;
+            align-items: start;
+            align-content: start;
+            width: max-content;
+            max-width: 100%;
+            min-height: 100vh;
+            padding: 3.5rem 0 0;
         }
 
-        h1 {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            font-size: 1.8rem;
+        .intro {
+            max-width: 20rem;
         }
 
-        h2 {
-            color: var(--primary-color);
-            font-weight: 100;
-            border-bottom: 1px solid var(--primary-color);
-            padding-bottom: 0.2rem;
-            margin-top: 0.3rem;
-            margin-bottom: 0rem;
-            font-size: 1.2rem;
+        .intro p {
+            margin: 0 0 1rem;
         }
 
-        .bio {
-            margin: 0.5rem 0;
-            text-align: justify;
-            margin-bottom: 2.0rem;
+        .links {
+            min-width: 0;
         }
 
-        .bio p {
-            margin-top: 0.5rem;
-            margin-bottom: 1.0rem;
+        .links ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
 
-        .bio a {
-            color: var(--link-color);
-            text-decoration: none;
+        .links li {
+            width: max-content;
+            margin: 0 0 0.35rem;
         }
 
-        .bio a:hover {
-            text-decoration-line: underline;
-            text-decoration-style: wavy;
+        .photo {
+            grid-column: 1 / -1;
+            width: 100%;
+            min-width: 0;
+            aspect-ratio: 1600 / 845.3;
+            margin: 0;
+            contain: inline-size;
+            overflow: hidden;
+        }
+
+        .photo img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            transform: translateY(-21%);
+        }
+
+        .work-grid {
+            width: min(40.75rem, 100%);
         }
 
         .papers {
+            min-width: 0;
+        }
+
+        .papers-header {
             display: grid;
-            gap: 0.1rem;
+            grid-template-columns: 8rem minmax(0, 1fr);
+            align-items: baseline;
+            margin-bottom: 2.75rem;
+        }
+
+        .papers h2 {
+            margin: 0;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+        }
+
+        .papers-note {
+            margin: 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .paper-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
 
         .paper {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 1.0rem;
-            padding: 1.0rem;
-            border-bottom: 1px solid #eee;
-            align-items: center;
+            grid-template-columns: 4rem minmax(0, 1fr);
+            margin-bottom: 2.25rem;
         }
 
-        .paper img {
-            width: 100%;
-            display: block;
-            margin: auto;
+        .paper-year {
+            padding-top: 0.15rem;
+            color: var(--faint);
+            font-size: 10px;
         }
 
-        .paper-content h3 {
-            margin-top: 0;
-            margin-bottom: 0.2rem;
-            color: var(--primary-color);
-            font-weight: 100;
-            font-size: 1rem;
+        .paper h3 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.35;
         }
 
-        .paper-content h3 a {
-            color: var(--primary-color);
-            text-decoration: none;
+        .paper h3 a {
+            color: var(--paper-link);
         }
 
-        .paper-content h3 a:hover {
-            text-decoration-line: underline;
-            text-decoration-style: wavy;
+        .paper-details,
+        .paper-venue {
+            margin: 0.4rem 0 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
         }
 
-        .paper-content p {
-            margin: 0.3rem 0;
-            font-size: 0.9rem;
+        .paper-venue {
+            color: var(--ink);
         }
 
-        .paper-content p a {
-            color: var(--link-color);
-            text-decoration: none;
+        .paper-venue a {
+            color: var(--resource-link);
         }
 
-        .paper-content p a:hover {
-            text-decoration-line: underline;
-            text-decoration-style: wavy;
+        .paper-me {
+            color: var(--author-highlight);
+            font-weight: 400;
         }
 
-        .links {
-            margin-top: 0.5rem;
-            text-align: center;
+        .paper-distinction {
+            color: var(--distinction-highlight);
         }
 
-        .links a {
-            color: var(--link-color);
-            text-decoration: none;
-            margin-right: 0.4rem;
-            margin-left: 0.4rem;
+        .paper-award {
+            color: var(--award-highlight);
         }
 
-        .links a:hover {
-            text-decoration-line: underline;
-            text-decoration-style: wavy;
-        }
+        @media (max-width: 820px) {
+            body {
+                padding: 0 1.5rem 5rem;
+            }
 
-        .highlight {
-            /* font-weight: 600; */
-            color: var(--highlight-color);
-        }
+            .home-grid {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) max-content;
+                column-gap: 1rem;
+                row-gap: 1rem;
+                align-items: start;
+                width: 100%;
+                min-height: 100vh;
+                max-width: 22rem;
+                padding: 1.5rem 0;
+                margin: 0;
+                font-size: 11px;
+                text-align: left;
+            }
 
-        .author-highlight {
-            color: var(--secondary-color);
-        }
+            .intro {
+                height: auto;
+                min-width: 0;
+                max-width: 20rem;
+            }
 
-        .blog-preview {
-            margin-top: 1.5rem;
-        }
+            .links {
+                height: auto;
+                min-width: 0;
+            }
 
-        @media (max-width: 600px) {
-            .profile-img {
-                width: 300px;
-                height: 300px;
+            .photo {
+                display: block;
+                width: 100%;
+                margin: 0;
+            }
+
+            .work-grid {
+                max-width: 22rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .papers,
+            .paper {
+                width: 100%;
+                text-align: center;
+            }
+
+            .links li {
+                width: max-content;
+            }
+
+            .papers-header {
+                display: block;
+                margin-bottom: 3rem;
+            }
+
+            .papers-note {
+                margin-top: 0.75rem;
             }
 
             .paper {
-                grid-template-columns: 1fr;
+                display: block;
+                margin-bottom: 2.75rem;
+            }
+
+            .paper-year {
+                display: block;
+                margin-bottom: 0.5rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Yoav Gelberg</h1>
-        <img src="assets/images/portrait.jpg" alt="Yoav Gelberg" class="profile-img">
-        <nav class="links" aria-label="External links">
-            <a href="https://github.com/yoavgelberg">[GitHub]</a>
-            <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">[Scholar]</a>
-            <a href="https://twitter.com/yoav_gelberg">[Twitter]</a>
-            <a href="mailto:yoav@robots.ox.ac.uk">[Email]</a>
-        </nav>
-    </header>
+    <main class="home-page">
+        <div class="home-grid">
+            <section class="intro" aria-label="Introduction">
+                <p>I'm a PhD student at Stanford.</p>
+                <p>I work on architectures and learning algorithms for language models, focusing on long-horizon tasks. I'm also interested in the
+                    structure of neural parameter spaces.</p>
+            </section>
 
-    <main>
-        <section class="bio">
-            <h2>About Me</h2>
-            <p>I'm an incoming CS PhD student at Stanford. I'm interested in architectures and learning algorithms for
-                language models, especially for long-horizon tasks, and in the structure of neural network
-                parameter spaces. I'm currently an intern on <a
-                    href="https://www.wisdom.weizmann.ac.il/~ylipman/">Yaron Lipman</a>'s team at <a
-                    href="https://ai.meta.com/">Meta</a>, working on multi-token prediction. Before Stanford,
-                I studied at Oxford, where I worked with <a href="https://haggaim.github.io/">Haggai Maron</a>, <a
-                    href="https://www.cs.ox.ac.uk/people/michael.bronstein/">Michael Bronstein</a>, and <a
-                    href="https://www.cs.ox.ac.uk/people/yarin.gal/website/">Yarin Gal</a>. I also spent time at <a href="https://sakana.ai">Sakana AI</a>, co-organized the <a
-                    href="https://weight-space-learning.github.io/">First Weight Space Learning Workshop</a> at ICLR,
-                studied at the Technion as a <a
-                    href="https://excellence.technion.ac.il/en/about-the-program/">Rothschild scholar</a>, and taught math
-                and programming at the <a href="https://www.ardc-israel.org/">ARDC</a>.</p>
-        </section>
+            <nav class="links" aria-label="Links">
+                <ul>
+                    <li>gelberg [at] stanford.edu</li>
+                    <li><a href="https://twitter.com/yoav_gelberg">@yoav_gelberg</a> on twitter</li>
+                    <li>papers on <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&amp;hl=en">scholar</a></li>
+                    <li>code on <a href="https://github.com/yoavgelberg">github</a></li>
+                    <li>check out <a href="https://www.instagram.com/morayah.jpg/">@morayah.jpg</a></li>
+                </ul>
+            </nav>
 
-        <section class="papers">
-            <h2>Selected Publications</h2>
-            <p style="margin-top: 0rem; margin-bottom: 0.3rem; font-size: 0.9em;"><em>* denotes equal contribution; full
-                    list on <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&hl=en">Google Scholar</a></em>
-            </p>
-            <div class="paper">
-                <img src="assets/images/kvcat.png"
-                    alt="KV-CAT forward pass and loss"
-                    loading="lazy">
-                <div class="paper-content">
-                    <h3><a href="https://arxiv.org/abs/2605.05971">Training Transformers for KV Cache Compressibility</a>
-                    </h3>
-                    <p><span class="author-highlight">Yoav Gelberg</span>*, Yam Eitan*, Michael Bronstein, Yarin Gal, Haggai
-                        Maron</p>
-                    <p><strong>HiLD @ ICML 2026</strong></p>
-                </div>
-            </div>
-            <div class="paper">
-                <img src="assets/images/drope.gif"
-                    alt="Animated figure from DroPE: extending LLM context by dropping positional embeddings." loading="lazy">
-                <div class="paper-content">
-                    <h3><a href="https://www.arxiv.org/abs/2512.12167">Extending the Context of Pretrained LLMs by Dropping
-                            Their Positional Embeddings
-                        </a></h3>
-                    <p><span class="author-highlight">Yoav Gelberg</span>, Koshi Eguchi, Takuya Akiva, Edoardo Cetin</p>
-                    <p><strong>ICLR 2026</strong></p>
-                    <p><a href="https://github.com/SakanaAI/DroPE">Code</a>, <a href="https://pub.sakana.ai/DroPE/">Blog</a></p>
-                    <div class="links">
-                        <!-- <a href="#">Code</a>
-                        <a href="#">Blog Post</a> -->
+            <figure class="photo">
+                <img src="assets/images/desktop-background.jpg" alt="Rocky coastline and sea">
+            </figure>
+        </div>
+
+        <div class="work-grid">
+            <section class="papers" aria-labelledby="papers-title">
+                <header class="papers-header">
+                    <h2 id="papers-title">selected papers</h2>
+                    <p class="papers-note">* equal contribution, full list on <a href="https://scholar.google.com/citations?user=FMbR_TkAAAAJ&amp;hl=en">Google Scholar</a></p>
+                </header>
+
+                <ol class="paper-list">
+                <li class="paper">
+                    <span class="paper-year">2026</span>
+                    <div>
+                        <h3><a href="https://arxiv.org/abs/2605.05971">Training Transformers for KV Cache Compressibility</a></h3>
+                        <p class="paper-details"><span class="paper-me">Yoav Gelberg</span>*, Yam Eitan*, Michael Bronstein, Yarin Gal, Haggai Maron</p>
+                        <p class="paper-venue">HiLD @ ICML 2026</p>
                     </div>
-                </div>
-            </div>
-            <div class="paper">
-                <img src="assets/images/gradmetanet.png"
-                    alt="GradMetaNet overview figure: an equivariant architecture for learning on gradients." loading="lazy">
-                <div class="paper-content">
-                    <h3><a href="https://arxiv.org/pdf/2507.01649">GradMetaNet: An Equivariant Architecture for Learning on
-                            Gradients</a></h3>
-                    <p><span class="author-highlight">Yoav Gelberg</span>*, Yam Eitan*, Aviv Navon, Aviv Shamsian, Theo
-                        (Moe) Putterman, Michael Bronstein, Haggai Maron</p>
-                    <p><strong>NeurIPS 2025</strong></p>
-                    <p><strong>Weight Space Learning Workshop @ ICLR 2025</strong></p>
-                    <div class="links">
-                        <!-- <a href="#">Code</a>
-                        <a href="#">Blog Post</a> -->
+                </li>
+
+                <li class="paper">
+                    <span class="paper-year">2026</span>
+                    <div>
+                        <h3><a href="https://www.arxiv.org/abs/2512.12167">Extending the Context of Pretrained LLMs by Dropping Their Positional Embeddings</a></h3>
+                        <p class="paper-details"><span class="paper-me">Yoav Gelberg</span>, Koshi Eguchi, Takuya Akiva, Edoardo Cetin</p>
+                        <p class="paper-venue">ICLR 2026, <a href="https://github.com/SakanaAI/DroPE">code</a>, <a href="https://pub.sakana.ai/DroPE/">blog</a></p>
                     </div>
-                </div>
-            </div>
-            <div class="paper">
-                <img src="assets/images/lol.png"
-                    alt="LoL paper figure: GL-equivariant processing of low-rank weight spaces." loading="lazy">
-                <div class="paper-content">
-                    <h3><a href="https://arxiv.org/pdf/2410.04207">Leaning on LoRAs: GL-Equivariant Processing of Low-Rank
-                            Weight Spaces for Large Finetuned Models</a></h3>
-                    <p>Theo (Moe) Putterman*, Derek Lim*, <span class="author-highlight">Yoav Gelberg</span>, Stephanie
-                        Jegelka, Haggai Maron</p>
-                    <p><strong>LoG 2025, <span class="highlight">Oral Presentation 🎤</span></strong></p>
-                    <p><strong>Weight Space Learning Workshop @ ICLR 2025</strong></p>
-                    <div class="links">
-                        <!-- <a href="#">Code</a>
-                        <a href="#">Blog Post</a> -->
+                </li>
+
+                <li class="paper">
+                    <span class="paper-year">2025</span>
+                    <div>
+                        <h3><a href="https://arxiv.org/pdf/2507.01649">GradMetaNet: An Equivariant Architecture for Learning on Gradients</a></h3>
+                        <p class="paper-details"><span class="paper-me">Yoav Gelberg</span>*, Yam Eitan*, Aviv Navon, Aviv Shamsian, Theo (Moe) Putterman, Michael Bronstein, Haggai Maron</p>
+                        <p class="paper-venue">NeurIPS 2025; Weight Space Learning Workshop @ ICLR 2025</p>
                     </div>
-                </div>
-            </div>
-            <div class="paper">
-                <img src="assets/images/losnet.png"
-                    alt="LOSNet paper figure on detecting hallucinations and data contamination." loading="lazy">
-                <div class="paper-content">
-                    <h3><a href="https://arxiv.org/pdf/2503.14043">Beyond Next Token Probabilities: Learnable, Fast
-                            Detection of Hallucinations and Data Contamination on LLM Output Distributions</a></h3>
-                    <p>Fabrizio Frasca*, Guy Bar-Shalom*, Derek Lim, <span class="author-highlight">Yoav Gelberg</span>,
-                        Yftah Ziser, Ran El-Yaniv, Gal Chechik, Haggai Maron</p>
-                    <p><strong>AAAI 2026</strong></p>
-                    <p><strong>R2-FM Workshop @ ICML 2025</strong></p>
-                    <div class="links">
-                        <!-- <a href="#">Code</a>
-                        <a href="#">Blog Post</a> -->
+                </li>
+
+                <li class="paper">
+                    <span class="paper-year">2025</span>
+                    <div>
+                        <h3><a href="https://arxiv.org/pdf/2410.04207">Leaning on LoRAs: GL-Equivariant Processing of Low-Rank Weight Spaces for Large Finetuned Models</a></h3>
+                        <p class="paper-details">Theo (Moe) Putterman*, Derek Lim*, <span class="paper-me">Yoav Gelberg</span>, Stephanie Jegelka, Haggai Maron</p>
+                        <p class="paper-venue">LoG 2025, <span class="paper-distinction">oral</span>; Weight Space Learning Workshop @ ICLR 2025</p>
                     </div>
-                </div>
-            </div>
-            <div class="paper">
-                <img src="assets/images/topological_blindspots.png"
-                    alt="Topological Blindspots paper figure on expressivity in topological deep learning." loading="lazy">
-                <div class="paper-content">
-                    <h3><a href="https://arxiv.org/pdf/2408.05486">Topological Blindspots: Understanding and Extending
-                            Topological Deep Learning Through the Lens of Expressivity</a></h3>
-                    <p>Yam Eitan*, <span class="author-highlight">Yoav Gelberg</span>*, Guy Bar-Shalom, Fabrizio Frasca,
-                        Michael Bronstein, Haggai Maron</p>
-                    <p><strong>ICLR 2025, <span class="highlight">Oral Presentation 🎤</span></strong></p>
-                    <p><a href="https://github.com/yoavgelberg/SMCN">Code</a></p>
-                </div>
-            </div>
-            <div class="paper">
-                <img src="assets/images/optim.gif"
-                    alt="Animated figure on permutation-invariant posteriors under model symmetries." loading="lazy">
-                <div class="paper-content">
-                    <h3><a href="https://arxiv.org/pdf/2408.05496">Variational Inference Failures Under Model Symmetries:
-                            Permutation Invariant Posteriors for Bayesian Neural Networks</a></h3>
-                    <p><span class="author-highlight">Yoav Gelberg</span>, Tycho van der Ouderaa, Mark van der Wilk, Yarin
-                        Gal</p>
-                    <p><strong>GRaM Workshop @ ICML 2024, <span class="highlight">Best Paper Award 🏆</span></strong>
-                    </p>
-                    <div class="links">
-                        <!-- <a href="#">Code</a>
-                        <a href="#">Blog Post</a> -->
+                </li>
+
+                <li class="paper">
+                    <span class="paper-year">2025</span>
+                    <div>
+                        <h3><a href="https://arxiv.org/pdf/2503.14043">Beyond Next Token Probabilities: Learnable, Fast Detection of Hallucinations and Data Contamination on LLM Output Distributions</a></h3>
+                        <p class="paper-details">Fabrizio Frasca*, Guy Bar-Shalom*, Derek Lim, <span class="paper-me">Yoav Gelberg</span>, Yftah Ziser, Ran El-Yaniv, Gal Chechik, Haggai Maron</p>
+                        <p class="paper-venue">AAAI 2026; R2-FM Workshop @ ICML 2025</p>
                     </div>
-                </div>
-            </div>
-        </section>
+                </li>
+
+                <li class="paper">
+                    <span class="paper-year">2025</span>
+                    <div>
+                        <h3><a href="https://arxiv.org/pdf/2408.05486">Topological Blindspots: Understanding and Extending Topological Deep Learning Through the Lens of Expressivity</a></h3>
+                        <p class="paper-details">Yam Eitan*, <span class="paper-me">Yoav Gelberg</span>*, Guy Bar-Shalom, Fabrizio Frasca, Michael Bronstein, Haggai Maron</p>
+                        <p class="paper-venue">ICLR 2025, <span class="paper-distinction">oral</span>, <a href="https://github.com/yoavgelberg/SMCN">code</a></p>
+                    </div>
+                </li>
+
+                <li class="paper">
+                    <span class="paper-year">2024</span>
+                    <div>
+                        <h3><a href="https://arxiv.org/pdf/2408.05496">Variational Inference Failures Under Model Symmetries: Permutation Invariant Posteriors for Bayesian Neural Networks</a></h3>
+                        <p class="paper-details"><span class="paper-me">Yoav Gelberg</span>, Tycho van der Ouderaa, Mark van der Wilk, Yarin Gal</p>
+                        <p class="paper-venue">GRaM Workshop @ ICML 2024, <span class="paper-award">best paper</span></p>
+                    </div>
+                </li>
+                </ol>
+            </section>
+        </div>
     </main>
 </body>
 
