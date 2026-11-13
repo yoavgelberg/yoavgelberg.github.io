@@ -1,0 +1,8 @@
+/artifacts/
+/runs/
+/sources/
+/scripts/
+/node_modules/
+*.tar.gz
+/.agents/
+/AGENTS.md
